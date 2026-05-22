@@ -25,5 +25,23 @@ public class Main {
         System.out.println();
         System.out.println("Exemplo de algumas árvores:");
         terreno.desenharAlgumasArvores(5);
+
+        // Estimativa de memória 
+        int bytesSemFlyweightPorArvore = 120;
+
+        long memoriaSemFlyweight = (long) quantidadeArvores * bytesSemFlyweightPorArvore;
+
+        int bytesArvoreLeve = 18;
+        int bytesEspecie = 200;
+
+        long memoriaComFlyweight = ((long) quantidadeArvores * bytesArvoreLeve) + ((long) quantidadeEspecies * bytesEspecie);
+
+        double mbCom = memoriaComFlyweight / 1000000.0;
+        double mbSem = memoriaSemFlyweight / 1000000.0;
+
+        System.out.println("\n===== MEMÓRIA =====");
+        System.out.printf("Memória com Flyweight: %.2f MB%n",mbCom);
+        System.out.printf("Memória sem Flyweight: %.2f MB%n", mbSem);
+        System.out.printf("Economia: %.2f MB%n",(mbSem - mbCom));
     }
 }
