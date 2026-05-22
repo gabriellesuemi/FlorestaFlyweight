@@ -15,6 +15,15 @@ public class Main {
         System.out.println("Objetos de espécie criados: " + FabricaEspecies.getTotalEspeciesCriadas());
         System.out.println("Objetos árvore criados: " + terreno.getTotalArvores());
 
+        int objetosComFlyweight = terreno.getTotalArvores() + FabricaEspecies.getTotalEspeciesCriadas();
+        int objetosSemFlyweight = terreno.getTotalArvores() * 2;
 
+        System.out.println();
+        System.out.println("Objetos com Flyweight: " + objetosComFlyweight);
+        System.out.println("Objetos sem Flyweight: " + objetosSemFlyweight);
+
+        System.out.println();
+        System.out.println("Exemplo de algumas árvores:");
+        terreno.desenharAlgumasArvores(5);
     }
 }
