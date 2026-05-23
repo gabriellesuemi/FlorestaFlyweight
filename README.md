@@ -1,7 +1,9 @@
 # Simulação de Árvores 2D com Flyweight
 
 Alunas:
+
 Gabrielle Suemi Iquejiri Alencar
+
 Lívia Costa da Silva
 
 Projeto em Java que simula a distribuição de milhares de árvores em um terreno 2D utilizando o padrão de projeto Flyweight, com foco na redução do consumo de memória.
